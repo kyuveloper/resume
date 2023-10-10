@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    height: 1000px;
+}
+h2 {
+    font-size: 27px;
+}
+
+/*상단 메뉴바*/
+.cover {
+    color: white;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    opacity: .8;
+}
+
+.contents {
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;*/
+}
+.contents .contents_bar {
+    justify-content: space-between;
+    display: flex;
+}
+.contents_bar .cover_menus {
+    display: flex;
+    margin: auto 0;
+}
+.cover_menus a {
+    font-weight: 700;
+    color: white;
+    margin: 0 1rem;
+    opacity: .8;
+}
+
+
+
+
+/*문구*/
+.intro {
+    text-align: center;
+    padding: 9rem 0 4rem 0;
+    font-size: 20px;
+}
+.intro span {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+.intro p {
+    margin-top: 4px;
+    font-size: 19px;
+    opacity: .9;
+}
+hr {
+    width: 4%;
+    margin: 1.5rem auto;
+    color: red;
+    border: 0;
+    border-top: 0.2rem solid;
+    opacity: .7;
+}
+
+.toAboutme {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 2.5rem;
+    border: none;
+    border-radius: 10rem;
+    background-color: #f4623a;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.aboutMe_contents {
+    padding: 4rem 2rem;
+    margin: 0 auto;
+}
+.aboutMe_text {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.aboutMe_text span {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #cccccc;
+}
