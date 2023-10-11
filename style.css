@@ -3,11 +3,11 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
     width: 100%;
-    height: 1000px;
 }
 h2 {
     font-size: 27px;
@@ -95,16 +95,204 @@ hr {
 }
 
 .aboutMe_contents {
+    width: 100%;
+    max-width: 71.25rem;
     padding: 4rem 2rem;
+    margin: 0 auto;
+}
+.aboutMe_title {
+    display: table;
+    position: relative;
+    margin: 0 auto 3rem;
+}
+.aboutMe_title_text {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: Black Han Sans,sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.aboutMe_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.aboutMe_info_wrapper {
+    width: 33.3333%;
+}
+.aboutMe_info_wrapper:first-child,
+.aboutMe_info_wrapper:nth-child(2),
+.aboutMe_info_wrapper:nth-child(3) {
+    margin-bottom: 2rem;
+}
+.aboutMe_basic_info {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    max-width: 14rem;
+    margin: 0 auto;
+    opacity: .8;
+}
+.aboutMe_info_icon img {
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
+}
+.aboutMe_text_label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.aboutMe_text_value {
+    font-weight: 400;
+    font-size: 1rem;
+}
+.aboutMe_text_value a {
+    color: black;
+}
+.aboutMe_text_value a:hover {
+    cursor: pointer;
+    color: aqua;
+}
+/* .aboutMe_contents {
+    width: 100%;
+    max-width: 71.25rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+}
+.aboutMe_title {
+    display: table;
+    position: relative;
+    margin: 0 auto 3rem;
+}
+.aboutMe_title_text {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: Black Han Sans,sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.aboutMe_info_section {
+    display: flex;
+}
+.aboutMe_info_wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.aboutMe_info:first-child,
+.aboutMe_info:nth-child(2),
+.aboutMe_info:nth-child(3) {
+    margin-bottom: 2rem;
+}
+.aboutMe_info {
+    display: flex;
+    width: 33.3333%;
+    opacity: .7;
+}
+.aboutMe_info_icon {
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
+}
+.aboutMe_info_text_label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.aboutMe_info_text_value {
+    font-weight: 400;
+    font-size: 1rem;
+} */
+/* ABOUT ME Information
+.aboutMe_contents {
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    max-width: 65rem;
+}
+.aboutMe_title {
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.aboutMe_title span {
+    font-weight: 700;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+}
+
+.aboutMe_info {
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    justify-content: space-around;
+}
+.aboutMe_info_img img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
+}
+.aboutMe_info_wrap {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.aboutMe_into_box {
+    max-width: 17rem;
+} */
+/*About Me Contents
+.aboutMe_contents {
+    padding: 4rem 11rem;
     margin: 0 auto;
 }
 .aboutMe_text {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
+    padding-bottom: 2rem;
 }
 .aboutMe_text span {
     border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
     border-bottom-color: #cccccc;
 }
+
+.aboutMe_contents_grid {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.aboutMe_grid_item {
+    margin-left: 70px;
+}
+.aboutMe_item_info {
+    display: flex;
+    margin: 1.5rem 0;
+}
+.aboutMe_item_info_icon img {
+    opacity: .7;
+    width: 25px;
+    margin-right: 2rem;
+}
+.aboutMe_item_info_text {
+    opacity: .8;
+}
+.aboutMe_item_info_text_label {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+.aboutMe_item_info_text_value {
+    font-size: 1rem;
+}*/
