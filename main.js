@@ -1,29 +1,20 @@
-/*$(document).ready(function(){
-    //상단 메뉴 고정
-    var $contents = $('contents');
-    $(window).scroll(function(){
-        if($(this).scrollTop() > 0) {
-            $contents.addClass('sticky');
-        } else {
-            $contents.removeClass('sticky');
+const toggleBtn = document.querySelector('#cover_menus_togglebar');
+const toggleMenu = document.querySelector('#cover_menus_toggle');
+const barColorChange = document.querySelector('.contents');
+
+toggleBtn.addEventListener('click', () => {
+    toggleMenu.classList.toggle('active');
+    toggleBtn.classList.toggle('barColor');
+    barColorChange.classList.toggle('colorChaned');
+})
+
+// const windowResize = innerWidth;
+// console.log(windowResize);
+window.addEventListener('resize', 
+    function() {
+        if (this.innerWidth > 992) {
+            toggleMenu.classList.remove('active');
+            toggleBtn.classList.remove('barColor');
+            barColorChange.classList.remove('colorChaned');
         }
     })
-});*/
-
-/*function scrollY(e) {
-    const contents = document.querySelector('.contents');
-    
-    if (window.scrollY > 0) {
-        contents.classList.add('sticky');
-    }
-}
-
-window.addEventListener('scroll', scrollY);*/
-
-var scrollEvt = document.getElementsByClassName('contents');
-
-window.addEventListener('scroll', function(){
-    if (scroll >0) {
-        contents.className = 'sticky';
-    }
-})

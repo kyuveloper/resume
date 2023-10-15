@@ -6,31 +6,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/e8f09b5de5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    
     <title>Kyuveloper Resume</title>
 </head>
 <body>
+    <!--상단 메뉴바-->
     <header>
-        <div class="cover">
+        <div id="cover" class="cover">
             <div class="contents">
                 <div class="contents_bar">
-                    <div class=cover_title"><h2>kyuveloper</h2></div>
-                    <ul class="cover_menus">
-                        <li><a href="">About Me</a></li>
-                        <li><a href="">Skills</a></li>
-                        <li><a href="">Archiving</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Career</a></li>
-                    </ul>
+                    <div class="cover_title"><a href="#"><h2>kyuveloper</h2></a></div>
+                        <ul class="cover_menus">
+                            <li><a href="#aboutMe">About Me</a></li>
+                            <li><a href="">Skills</a></li>
+                            <li><a href="">Archiving</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">Career</a></li>
+                        </ul>
                 </div>
             </div>
+            <!--토글 버튼 & 메뉴-->
+            <div id="cover_menus_togglebar"">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div id="cover_menus_toggle">
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Archiving</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Career</a></li>
+            </div>
+            
+            <!--메인 화면 텍스트-->
             <div class="intro">
                 <span>- 김진규 -<br>웹 개발자 포트폴리오</span>
                 <hr>
                 <p>안녕하세요</p>
                 <p>공부가 취미인 풀스택 웹 개발자입니다.</p>
-                <p>매우 꼼꼼한 성격, 그리고 공부를 밥 먹듯이 하는 습관이 저의 장점입니다.</p>
+                <p>매우 꼼꼼한 성격, 그리고 끈기있게 해결하는 습관이 저의 장점입니다.</p>
                 <div class="toAboutme">
                     더 알아보기 ↓
                 </div>
@@ -106,154 +121,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="aboutMe_contactMe">
+                    * 연락은 위의 연락처와 이메일 통해 부탁드립니다.
+                </div>
             </div>
-        </article>
-            
-
-
-
-
-
-            <!-- About Me information
-            <div class="aboutMe_section">
-                <div class="aboutMe_contents">
-                    <div class="aboutMe_title">
-                        <span>ABOUT ME</span>
-                    </div>
-                    <div class="aboutMe_info">
-                        <div class="aboutMe_into_box">
-                            <div class="aboutMe_info_wrap">
-                                <div class="aboutMe_info_img">
-                                    <img src="./user.png" alt="">
-                                </div>
-                                <div class="aboutMe_info_text">
-                                    <div class="aboutMe_info_label">이름</div>
-                                    <div class="aboutMe_info_value">김진규</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="aboutMe_into_box">
-                            <div class="aboutMe_info_wrap">
-                                <div class="aboutMe_info_img">
-                                    <img src="./user.png" alt="">
-                                </div>
-                                <div class="aboutMe_info_text">
-                                    <div class="aboutMe_info_label">생년월일</div>
-                                    <div class="aboutMe_info_value">1994.01.27</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="aboutMe_into_box">
-                            <div class="aboutMe_info_wrap">
-                                <div class="aboutMe_info_img">
-                                    <img src="./user.png" alt="">
-                                </div>
-                                <div class="aboutMe_info_text">
-                                    <div class="aboutMe_info_label">주소지</div>
-                                    <div class="aboutMe_info_value">경기도 고양시 일산서구</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="aboutMe_into_box">
-                            <div class="aboutMe_info_wrap">
-                            <div class="aboutMe_info_img">
-                                <img src="./user.png" alt="">
-                            </div>
-                            <div class="aboutMe_info_text">
-                                <div class="aboutMe_info_label">연락처</div>
-                                <div class="aboutMe_info_value">010-9366-2054</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="aboutMe_into_box">
-                            <div class="aboutMe_info_wrap">
-                                <div class="aboutMe_info_img">
-                                    <img src="./user.png" alt="">
-                                </div>
-                                <div class="aboutMe_info_text">
-                                    <div class="aboutMe_info_label">이메일</div>
-                                    <div class="aboutMe_info_value">jinkyuk127@gmail.com</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="aboutMe_into_box">
-                            <div class="aboutMe_info_wrap">
-                                <div class="aboutMe_info_img">
-                                    <img src="./user.png" alt="">
-                                </div>
-                                <div class="aboutMe_info_text">
-                                    <div class="aboutMe_info_label">학력</div>
-                                    <div class="aboutMe_info_value">Grossmont College<br>(Computer Sceience)</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!--<div class="aboutMe_contents">
-                <div class="aboutMe_text">
-                    <span>ABOUT ME</span>
-                </div>
-                
-                <div class="aboutMe_contents_grid">
-                    <div class="aboutMe_grid_item">
-                        <div class="aboutMe_item_info">
-                            <div class="aboutMe_item_info_icon"><img src="./user.png" alt=""></div>
-                            <div class="aboutMe_item_info_text">
-                                <div class="aboutMe_item_info_text_label">이름</div>
-                                <div class="aboutMe_item_info_text_value">김진규</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aboutMe_grid_item">
-                        <div class="aboutMe_item_info">
-                            <div class="aboutMe_item_info_icon"><img src="./user.png" alt=""></div>
-                            <div class="aboutMe_item_info_text">
-                                <div class="aboutMe_item_info_text_label">생년월일</div>
-                                <div class="aboutMe_item_info_text_value">1994.01.27</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aboutMe_grid_item">
-                        <div class="aboutMe_item_info">
-                            <div class="aboutMe_item_info_icon"><img src="./user.png" alt=""></div>
-                            <div class="aboutMe_item_info_text">
-                                <div class="aboutMe_item_info_text_label">주소지</div>
-                                <div class="aboutMe_item_info_text_value">경기도 고양시 일산서구</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aboutMe_grid_item">
-                        <div class="aboutMe_item_info">
-                            <div class="aboutMe_item_info_icon"><img src="./user.png" alt=""></div>
-                            <div class="aboutMe_item_info_text">
-                                <div class="aboutMe_item_info_text_label">연락처</div>
-                                <div class="aboutMe_item_info_text_value">010-9366-2054</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aboutMe_grid_item">
-                        <div class="aboutMe_item_info">
-                            <div class="aboutMe_item_info_icon"><img src="./user.png" alt=""></div>
-                            <div class="aboutMe_item_info_text">
-                                <div class="aboutMe_item_info_text_label">이메일</div>
-                                <div class="aboutMe_item_info_text_value">jinkyuk127@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aboutMe_grid_item">
-                        <div class="aboutMe_item_info">
-                            <div class="aboutMe_item_info_icon"><img src="./user.png" alt=""></div>
-                            <div class="aboutMe_item_info_text">
-                                <div class="aboutMe_item_info_text_label">학력</div>
-                                <div class="aboutMe_item_info_text_value">Grossmont College<br>(Computer Sceience)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>]
-            -->
         </article>
     </main>
 </body>
+<script src="main.js"></script>
 </html>

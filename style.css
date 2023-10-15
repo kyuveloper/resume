@@ -5,10 +5,21 @@
     list-style: none;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Noto Sans KR', sans-serif;
     width: 100%;
+    height: 3000px;
+    line-height: 1.5;
 }
+a:visited, a:hover,
+a:focus, a:active {
+    text-decoration: none;
+    color: black;
+}
+    
 h2 {
     font-size: 27px;
 }
@@ -16,7 +27,7 @@ h2 {
 /*상단 메뉴바*/
 .cover {
     color: white;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
         url('background.jpg');
     background-repeat: no-repeat;
@@ -24,18 +35,22 @@ h2 {
     background-size: cover;
     opacity: .8;
 }
-
 .contents {
     justify-content: space-between;
     padding: 1rem 3rem;
-    position: absolute;
+    margin: 0 auto;
+    max-width: 80rem;
+    /* position: absolute;
     left: 0;
     right: 0;
-    z-index: 999;
-    /*position: fixed;
+    z-index: 999; */
+    /* position: fixed; */
     top: 0;
     left: 0;
-    right: 0;*/
+    right: 0;
+}
+.contents a {
+    color: white;
 }
 .contents .contents_bar {
     justify-content: space-between;
@@ -51,15 +66,78 @@ h2 {
     margin: 0 1rem;
     opacity: .8;
 }
-
-
+@media (max-width: 992px ) {
+    .contents {
+        background-color: white;
+    }
+    .contents a {
+        color: black;
+    }
+    .cover_menus li {
+        display: none;
+    }
+    .cover .intro span {
+        font-size: 3rem;
+    }
+    .cover .intro p {
+        font-size: 1rem;
+    }
+    .aboutMe_title .aboutMe_title_text {
+        font-size: 2.5rem;
+    }
+    .aboutMe_info .aboutMe_info_wrapper {
+        width: 50%;
+    }
+}
+@media (min-width: 993px) {
+    #cover_menus_togglebar {
+        display: none;
+    }
+}
+#cover_menus_togglebar {
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+#cover_menus_togglebar i {
+    font-size: 1.5rem;
+    color: black;
+}
+#cover_menus_toggle {
+    overflow: hidden;
+    max-height: 0;
+    transition: .2s ease;
+}
+#cover_menus_toggle.active {
+    overflow: hidden;
+    max-height: 15.75rem;
+    padding-left: 3rem;
+    background-color: white;
+    transition: max-height .2s ease;
+}
+#cover_menus_toggle li {
+    margin: 1rem 0;
+}
+#cover_menus_toggle li:first-child {
+    padding-top: 1.5rem;
+    margin-top: 0;
+}
+#cover_menus_toggle li:last-child {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+}
+#cover_menus_toggle a {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
 
 /*문구*/
 .intro {
     text-align: center;
-    padding: 9rem 0 4rem 0;
-    font-size: 20px;
+    padding: 4rem 0;
 }
 .intro span {
     font-size: 3.5rem;
@@ -67,11 +145,11 @@ h2 {
 }
 .intro p {
     margin-top: 4px;
-    font-size: 19px;
+    font-size: 1.2rem;
     opacity: .9;
 }
 hr {
-    width: 4%;
+    width: 3.25rem;
     margin: 1.5rem auto;
     color: red;
     border: 0;
@@ -94,6 +172,8 @@ hr {
     cursor: pointer;
 }
 
+
+/* About Me Information */
 .aboutMe_contents {
     width: 100%;
     max-width: 71.25rem;
@@ -128,7 +208,7 @@ hr {
 }
 .aboutMe_basic_info {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row nowrap; /* 있어야하나? */
     width: 100%;
     max-width: 14rem;
     margin: 0 auto;
@@ -155,144 +235,13 @@ hr {
 }
 .aboutMe_text_value a:hover {
     cursor: pointer;
-    color: aqua;
-}
-/* .aboutMe_contents {
-    width: 100%;
-    max-width: 71.25rem;
-    padding: 4rem 2rem;
-    margin: 0 auto;
-}
-.aboutMe_title {
-    display: table;
-    position: relative;
-    margin: 0 auto 3rem;
-}
-.aboutMe_title_text {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    font-family: Black Han Sans,sans-serif;
-    font-weight: 400;
-    font-size: 3rem;
-    line-height: 1.5;
+    color: green;
 }
 
-.aboutMe_info_section {
-    display: flex;
-}
-.aboutMe_info_wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-}
-.aboutMe_info:first-child,
-.aboutMe_info:nth-child(2),
-.aboutMe_info:nth-child(3) {
-    margin-bottom: 2rem;
-}
-.aboutMe_info {
-    display: flex;
-    width: 33.3333%;
-    opacity: .7;
-}
-.aboutMe_info_icon {
-    width: 2rem;
-    min-width: 2rem;
-    height: 2rem;
-    margin-top: 0.2rem;
-    margin-right: 2rem;
-}
-.aboutMe_info_text_label {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-.aboutMe_info_text_value {
-    font-weight: 400;
-    font-size: 1rem;
-} */
-/* ABOUT ME Information
-.aboutMe_contents {
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    max-width: 65rem;
-}
-.aboutMe_title {
-    margin-bottom: 4rem;
+.aboutMe_contactMe {
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 3rem;
+    background-color: rgba(3,199,90,255);
 }
-.aboutMe_title span {
-    font-weight: 700;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #cccccc;
-}
-
-.aboutMe_info {
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    max-width: 80rem;
-    display: flex;
-    justify-content: space-around;
-}
-.aboutMe_info_img img {
-    width: 2rem;
-    height: 2rem;
-    margin-top: 0.2rem;
-    margin-right: 2rem;
-}
-.aboutMe_info_wrap {
-    display: flex;
-    margin-bottom: 2rem;
-}
-.aboutMe_into_box {
-    max-width: 17rem;
-} */
-/*About Me Contents
-.aboutMe_contents {
-    padding: 4rem 11rem;
-    margin: 0 auto;
-}
-.aboutMe_text {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    padding-bottom: 2rem;
-}
-.aboutMe_text span {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #cccccc;
-}
-
-.aboutMe_contents_grid {
-    align-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.aboutMe_grid_item {
-    margin-left: 70px;
-}
-.aboutMe_item_info {
-    display: flex;
-    margin: 1.5rem 0;
-}
-.aboutMe_item_info_icon img {
-    opacity: .7;
-    width: 25px;
-    margin-right: 2rem;
-}
-.aboutMe_item_info_text {
-    opacity: .8;
-}
-.aboutMe_item_info_text_label {
-    font-size: 1.25rem;
-    font-weight: bolder;
-    margin-bottom: 0.5rem;
-}
-.aboutMe_item_info_text_value {
-    font-size: 1rem;
-}*/
