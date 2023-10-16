@@ -157,6 +157,9 @@ div {
     line-height: 1.5;
     cursor: pointer;
 }
+.cover_toAboutMe a {
+    color: black;
+}
 
 /* About Me Information */
 .aboutMe_contents {
