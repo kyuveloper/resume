@@ -1,20 +1,21 @@
-const toggleBtn = document.querySelector('#cover_menus_togglebar');
-const toggleMenu = document.querySelector('#cover_menus_toggle');
-const barColorChange = document.querySelector('.contents');
+const navBar = document.querySelector('.header_bar');
+const toggleBtn = document.querySelector('.toggle_button');
+const toggleMenu = document.querySelector('.toggle_menuBar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+        navBar.classList.add("scroll");
+    } else if(window.scrollY < 31) {
+        navBar.classList.remove("scroll");
+    }
+})
 
 toggleBtn.addEventListener('click', () => {
     toggleMenu.classList.toggle('active');
-    toggleBtn.classList.toggle('barColor');
-    barColorChange.classList.toggle('colorChaned');
 })
 
-// const windowResize = innerWidth;
-// console.log(windowResize);
-window.addEventListener('resize', 
-    function() {
-        if (this.innerWidth > 992) {
-            toggleMenu.classList.remove('active');
-            toggleBtn.classList.remove('barColor');
-            barColorChange.classList.remove('colorChaned');
-        }
-    })
+window.addEventListener('resize', () => {
+    if (innerWidth > 992) {
+        toggleMenu.classList.remove('active');
+    }
+})

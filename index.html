@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e8f09b5de5.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e8f09b5de5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    
-    <title>Kyuveloper Resume</title>
+    <title>Kyuveloper Portfolio</title>
 </head>
 <body>
     <!--상단 메뉴바-->
-    <header>
-        <div id="cover" class="cover">
-            <div class="contents">
-                <div class="contents_bar">
-                    <div class="cover_title"><a href="#"><h2>kyuveloper</h2></a></div>
-                        <ul class="cover_menus">
-                            <li><a href="#aboutMe">About Me</a></li>
-                            <li><a href="">Skills</a></li>
-                            <li><a href="">Archiving</a></li>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">Career</a></li>
-                        </ul>
-                </div>
+    <header class="header_bar">
+        <div class="header_contents">
+            <div class="header_title"><a href="#">Kyuveloper</a></div>
+            <div class="header_menus">
+                <div class="header_menu"><a href="#aboutMe">About Me</a></div>
+                <div class="header_menu"><a href="">Skills</a></div>
+                <div class="header_menu"><a href="">Archiving</a></div>
+                <div class="header_menu"><a href="">Projects</a></div>
+                <div class="header_menu"><a href="">Career</a></div>
             </div>
-            <!--토글 버튼 & 메뉴-->
-            <div id="cover_menus_togglebar"">
+            <div class="toggle_button">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div id="cover_menus_toggle">
-                <li><a href="#aboutMe">About Me</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Archiving</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Career</a></li>
-            </div>
-            
-            <!--메인 화면 텍스트-->
-            <div class="intro">
-                <span>- 김진규 -<br>웹 개발자 포트폴리오</span>
-                <hr>
-                <p>안녕하세요</p>
-                <p>공부가 취미인 풀스택 웹 개발자입니다.</p>
-                <p>매우 꼼꼼한 성격, 그리고 끈기있게 해결하는 습관이 저의 장점입니다.</p>
-                <div class="toAboutme">
-                    더 알아보기 ↓
-                </div>
-            </div>
+        </div>
+        <div class="toggle_menuBar">
+            <div class="toggle_menus"><a href="#aboutMe">About Me</a></div>
+            <div class="toggle_menus"><a href="">Skills</a></div>
+            <div class="toggle_menus"><a href="">Archiving</a></div>
+            <div class="toggle_menus"><a href="">Projects</a></div>
+            <div class="toggle_menus"><a href="">Career</a></div>
         </div>
     </header>
-
+    <div class="main_cover">
+        <div class="cover_contents">
+            <div class="cover_main_text">- 김진규 -<br>웹 개발자 포트폴리오</div>
+            <hr class="cover_hr">
+            <div class="cover_sub_text">안녕하세요<br>공부가 취미인 풀스택 웹 개발자입니다.<br>매우 꼼꼼한 성격, 그리고 끈기있게 해결하는 습관이 저의 장점입니다.</div>
+            <div class="cover_toAboutMe">더 알아보기 ↓</div>
+        </div>
+    </div>
     <main>
         <article id="aboutMe" class="aboutMe">
             <div class="aboutMe_contents">

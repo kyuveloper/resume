@@ -1,169 +1,155 @@
-* {
-    margin: 0;
-    padding: 0;
+:root {
+    --naver-color: rgba(3,199,90,255);
+}
+*{
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
-}
-html {
     scroll-behavior: smooth;
 }
+
 body {
+    margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
-    width: 100%;
+    line-height: normal;
     height: 3000px;
-    line-height: 1.5;
 }
-a:visited, a:hover,
-a:focus, a:active {
-    text-decoration: none;
-    color: black;
-}
-    
-h2 {
-    font-size: 27px;
+div {
+    display: block;
 }
 
-/*상단 메뉴바*/
-.cover {
+
+/* Header Bar */
+.header_bar {
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+}
+.header_bar.scroll {
+    transition: all .5s;
+    background-color: white;
+}
+.header_bar.scroll .header_contents a {
+    color: black;
+}
+.header_contents {
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 71.25rem;
+    height: 4.5rem;
+    padding: 1.25rem 2rem;
+    margin: 0 auto;
+    color: #fff;
+}
+.header_contents a {
     color: white;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-        url('background.jpg');
+}
+.header_title {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    cursor: pointer;
+}
+.header_menus {
+    float: right;
+}
+.header_menu {
+    display: inline-block;
+    padding: 0 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 2rem;
+    cursor: pointer;
+}
+.toggle_button {
+    display: none;
+    float: right;
+}
+.toggle_button i {
+    color: black;
+    font-size: 1.7rem;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.toggle_menuBar {
+    overflow: hidden;
+    background-color: white;
+    height: 0;
+    max-height: 15.75rem;
+    padding-left: 2rem;
+    transition: all .5s;
+}
+.toggle_menuBar.active {
+    height: 15.75rem;
+    transition: all .5s;
+}
+.toggle_menuBar a {
+    color: #6c757d;
+}
+.toggle_menus:first-child {
+    margin-top: 1rem;
+}
+.toggle_menus:last-child {
+    margin-bottom: 1rem;
+}
+.toggle_menus {
+    display: table;
+    padding: 0.75rem 0;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    cursor: pointer;
+}
+
+/* Main Cover */
+.main_cover {
+    position: relative;
+    background-image: url(./background.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
     opacity: .8;
 }
-.contents {
-    justify-content: space-between;
-    padding: 1rem 3rem;
+.cover_contents {
+    width: 100%;
+    max-width: 71.25rem;
     margin: 0 auto;
-    max-width: 80rem;
-    /* position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 999; */
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-}
-.contents a {
-    color: white;
-}
-.contents .contents_bar {
-    justify-content: space-between;
-    display: flex;
-}
-.contents_bar .cover_menus {
-    display: flex;
-    margin: auto 0;
-}
-.cover_menus a {
-    font-weight: 700;
-    color: white;
-    margin: 0 1rem;
-    opacity: .8;
-}
-@media (max-width: 992px ) {
-    .contents {
-        background-color: white;
-    }
-    .contents a {
-        color: black;
-    }
-    .cover_menus li {
-        display: none;
-    }
-    .cover .intro span {
-        font-size: 3rem;
-    }
-    .cover .intro p {
-        font-size: 1rem;
-    }
-    .aboutMe_title .aboutMe_title_text {
-        font-size: 2.5rem;
-    }
-    .aboutMe_info .aboutMe_info_wrapper {
-        width: 50%;
-    }
-}
-@media (min-width: 993px) {
-    #cover_menus_togglebar {
-        display: none;
-    }
-}
-#cover_menus_togglebar {
-    position: absolute;
-    right: 3rem;
-    top: 1.5rem;
-    cursor: pointer;
-}
-#cover_menus_togglebar i {
-    font-size: 1.5rem;
-    color: black;
-}
-#cover_menus_toggle {
-    overflow: hidden;
-    max-height: 0;
-    transition: .2s ease;
-}
-#cover_menus_toggle.active {
-    overflow: hidden;
-    max-height: 15.75rem;
-    padding-left: 3rem;
-    background-color: white;
-    transition: max-height .2s ease;
-}
-#cover_menus_toggle li {
-    margin: 1rem 0;
-}
-#cover_menus_toggle li:first-child {
-    padding-top: 1.5rem;
-    margin-top: 0;
-}
-#cover_menus_toggle li:last-child {
-    padding-bottom: 1.5rem;
-    margin-bottom: 0;
-}
-#cover_menus_toggle a {
-    margin: 2rem 0;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-
-/*문구*/
-.intro {
+    padding: 8.5rem 2rem 4rem;
     text-align: center;
-    padding: 4rem 0;
 }
-.intro span {
-    font-size: 3.5rem;
-    font-weight: 900;
+.cover_main_text {
+    font-family: Black Han Sans,sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #fff;
 }
-.intro p {
-    margin-top: 4px;
-    font-size: 1.2rem;
-    opacity: .9;
-}
-hr {
+.cover_hr {
     width: 3.25rem;
+    height: 0;
     margin: 1.5rem auto;
-    color: red;
-    border: 0;
-    border-top: 0.2rem solid;
-    opacity: .7;
+    border: none;
+    border-top: 0.2rem solid var(--naver-color);
+    opacity: 1;
 }
-
-.toAboutme {
+.cover_sub_text {
+    margin: 0 auto 2rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: hsla(0,0%,100%,.95);
+    line-height: 1.5;
+}
+.cover_toAboutMe {
     display: inline-block;
     padding: 1rem 2rem;
-    margin-top: 2.5rem;
     border: none;
     border-radius: 10rem;
-    background-color: #f4623a;
+    background-color: var(--naver-color);
     font-weight: 400;
     font-size: 1rem;
     text-decoration: none;
@@ -171,7 +157,6 @@ hr {
     line-height: 1.5;
     cursor: pointer;
 }
-
 
 /* About Me Information */
 .aboutMe_contents {
@@ -244,4 +229,37 @@ hr {
     margin-top: 2rem;
     text-align: center;
     background-color: rgba(3,199,90,255);
+}
+
+/* Media Size Max-width: 992 */
+@media (max-width: 992px) {
+    .header_bar {
+        background-color: white;
+    }
+    .header_bar .header_contents a {
+        color: black;
+    }
+    .header_menus {
+        display: none;
+    }
+    .toggle_button {
+        display: block;
+    }
+    .cover_main_text {
+        font-size: 3rem;
+    }
+    .cover_sub_text {
+        font-size: 1rem;
+    }
+    .aboutMe_title .aboutMe_title_text {
+        font-size: 2.5rem;
+    }
+    .aboutMe_info .aboutMe_info_wrapper {
+        width: 50%;
+    }
+}
+@media (min-width: 993px) {
+    .toggle_menuBar {
+        display: none;
+    }
 }
