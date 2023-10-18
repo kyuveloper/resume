@@ -160,6 +160,24 @@ div {
 .cover_toAboutMe a {
     color: black;
 }
+#dynamic {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 2.5px;
+    height: 100%;
+    background-color: white;
+}
+#dynamic.twinkle::after {
+    display: none;
+}
 
 /* About Me Information */
 .aboutMe_contents {
@@ -266,3 +284,9 @@ div {
         display: none;
     }
 }
+
+
+
+
+
+
